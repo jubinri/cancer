@@ -3,8 +3,8 @@
 	Title	: Define the scratch pattern
 	Author	: Jubin Ri
 	Created By : 2015.12.07
-    Last Updated By : 2015.12.11
-    
+    	Last Updated By : 2015.12.11
+    	Tested By : Jubin Ri
 */
 
     function process( $obj, $contents )
@@ -12,7 +12,7 @@
 		global $img_url, $biology, $expertise, $certification, $education, $location, $research_interests, $phone, $email, $appointment, $zipcode, $speciality, $training, $honor, $rank, $dgree;
 
 
-		// Get Image
+		// Get Image + 1
 		$pattern = '/<div class="profilePhotoContainer" id="provImage_MD">([^<]*)<img src="([^"]*)"([^>]*)>([^<]*)<\/div>/';
 		$matches = '';
 		preg_match_all( $pattern , $contents, $matches );
@@ -155,4 +155,6 @@
         if( strlen( $location ) > 0 ) $location = substr( $location, 0, strlen( $location ) - 2 );
         if( strlen( $zipcode ) > 0 ) $zipcode = substr( $zipcode, 0, strlen( $zipcode ) - 2 );
     }
+    
+    echo "The project is done";
 ?>
