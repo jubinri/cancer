@@ -44,7 +44,6 @@
 		{
             if( getAttribute( $node, 'class') == 'dr-profile-titles' )
             {
-//                echo 'here';
 //                echo $obj->saveHTML( $node );
                 $appointment = $node->nodeValue;
             }
@@ -142,4 +141,7 @@
             $rank = 1;
         
         if( strlen( $zipcode ) > 0 ) $zipcode = substr( $zipcode, 0, strlen( $zipcode ) - 2 );    }
+    
+        
+    echo 'Here is another comment';
 ?>
